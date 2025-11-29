@@ -1,0 +1,9 @@
+# requirements.txt
+# Add your project dependencies here, one per line.
+# 
+# Examples:
+#   requests==2.31.0
+#   flask>=2.0.0
+#   numpy
+#
+# Install with: pip install -r requirements.txt
