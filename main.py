@@ -8,7 +8,7 @@ Run with: python main.py
 
 def main():
     """Main entry point."""
-    print("Hello, World!")
+    print("Hello, World! ")
     # Your application logic goes here
 
 
