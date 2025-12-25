@@ -5,13 +5,11 @@ import os
 from datetime import datetime
 from typing import Any, Dict
 
+
 def save_state(data: Dict[str, Any], filename: str = "state.json") -> bool:
     """Save data to a JSON file with timestamp."""
     try:
-        payload = {
-            "saved_at": datetime.now().isoformat(),
-            "data": data
-        }
+        payload: Dict[str, Any] = {"saved_at": datetime.now().isoformat(), "data": data}
         with open(filename, "w", encoding="utf-8") as f:
             json.dump(payload, f, indent=2)
         print(f"State saved to {filename}")
@@ -19,6 +17,7 @@ def save_state(data: Dict[str, Any], filename: str = "state.json") -> bool:
     except Exception as e:
         print(f"Error saving state: {e}")
         return False
+
 
 def load_state(filename: str = "state.json") -> Dict[str, Any]:
     """Load data from a JSON file."""
