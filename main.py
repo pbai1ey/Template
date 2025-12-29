@@ -8,8 +8,13 @@ def main() -> None:
     """Main application entry point."""
     print("Hello from your new Python project!")
     # Add your code here
-    num = 42
-    print(f"The answer to life, the universe, and everything is {num}.")
+    try:
+        num = int(input("Enter a number: "))
+    except ValueError:
+        print("Invalid input, using default.")
+        num = 42
+    thing = "world"
+    print(f"Hello, {thing}!")
     array = [1, 2, 3, 4, 5]
     print(f"Here is an array: {array}")
     matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -26,6 +31,13 @@ def main() -> None:
     while while_loop_counter < 3:
         print(f"While loop iteration {while_loop_counter}")
         while_loop_counter += 1
+    try:
+        result = 10 / 2
+        print(f"Division result: {result}")
+    except ZeroDivisionError:
+        print("Error: Division by zero is not allowed.")
+    finally:
+        print("Execution of try-except block is complete.")
 
 
 if __name__ == "__main__":
