@@ -23,12 +23,12 @@ def main() -> None:
     print(f"Here is a dictionary: {dict_example}")
     list_comprehension = [x * 2 for x in range(5)]
     print(f"Here is a list comprehension: {list_comprehension}")
-    for i in range(3):
+    for i in range(num):
         print(f"Loop iteration {i}")
     if_condition = "even" if num % 2 == 0 else "odd"
     print(f"The number {num} is {if_condition}.")
     while_loop_counter = 0
-    while while_loop_counter < 3:
+    while while_loop_counter < num:
         print(f"While loop iteration {while_loop_counter}")
         while_loop_counter += 1
     try:
