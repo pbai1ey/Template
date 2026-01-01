@@ -1,20 +1,10 @@
-#!/usr/bin/env python3
-"""
-Entry point for the Python template project.
-"""
 from persistence import load_state, save_state
 
-
 def main() -> None:
-    """Main application entry point."""
     print("Hello from your new Python project!")
-    # Add your code here
-
-    # Load previous state
     state = load_state()
     run_count = state.get("run_count", 0) + 1
     print(f"This is run #{run_count}")
-
     try:
         num = int(input("Enter a number: "))
     except ValueError:
@@ -45,10 +35,7 @@ def main() -> None:
         print("Error: Division by zero is not allowed.")
     finally:
         print("Execution of try-except block is complete.")
-
-    # Save state before exit
     save_state({"run_count": run_count, "last_num": num, "last_result": if_condition})
-
 
 if __name__ == "__main__":
     main()
